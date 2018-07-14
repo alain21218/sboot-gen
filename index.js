@@ -3,7 +3,13 @@
 require('./lib/text.js');
 
 const program = require('commander');
-const { generateAll, generateEntity, generateRepo, generateRest } = require('./lib/generate');
+const {
+    generateAll,
+    generateEntity,
+    generateRepo,
+    generateRest,
+    generateProperties
+} = require('./lib/generate');
 
 program
     .command('repo <name>')
@@ -18,8 +24,8 @@ program
     .action(generateEntity);
 
 program
-    .command('rest <name>')
-    .alias('rc')
+    .command('ctrl <name>')
+    .alias('c')
     .description('Generate a rest controller')
     .action(generateRest);
 
@@ -28,6 +34,12 @@ program
     .alias('a')
     .description('Generate entity, rest controller and repository')
     .action(generateAll);
+
+program
+    .command('prop')
+    .alias('p')
+    .description('Default application.properties file to use JPA')
+    .action(generateProperties);
 
 
 program.parse(process.argv);
