@@ -12,6 +12,9 @@ const {
 } = require('./lib/generate');
 
 program
+    .description('Move into the directory where your pom.xml is located')
+
+program
     .command('repo <name>')
     .alias('r')
     .description('Generate a repository')
