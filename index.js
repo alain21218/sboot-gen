@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-require('./lib/text.js');
+require('./lib/polyfills.js');
 
 const program = require('commander');
 const { generateAll, generateEntity, generateRepo, generateRest } = require('./lib/generate');
