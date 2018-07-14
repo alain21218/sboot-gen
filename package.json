@@ -1,6 +1,6 @@
 {
   "name": "sboot-gen",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Spring boot generator",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,7 @@
   "dependencies": {
     "chalk": "^2.4.1",
     "commander": "^2.16.0",
+    "xml-js": "^1.6.7",
     "xml2json": "^0.11.2"
   },
   "bin": {

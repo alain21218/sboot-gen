@@ -8,7 +8,9 @@ const {
     generateEntity,
     generateRepo,
     generateRest,
-    generateProperties
+    generateProperties,
+    importSwagger,
+    init
 } = require('./lib/generate');
 
 program
@@ -44,5 +46,16 @@ program
     .description('Default application.properties file to use JPA')
     .action(generateProperties);
 
+program
+    .command('swagger')
+    .alias('s')
+    .description('Import swagger')
+    .action(importSwagger);
+
+program
+    .command('init')
+    .alias('i')
+    .description('Import swagger & init properties')
+    .action(init);
 
 program.parse(process.argv);
