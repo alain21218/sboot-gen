@@ -4,7 +4,6 @@ require('./lib/text.js');
 
 const program = require('commander');
 const {
-    generateAll,
     generateEntity,
     generateRepo,
     generateRest,
@@ -33,12 +32,6 @@ program
     .alias('c')
     .description('Generate a rest controller')
     .action(generateRest);
-
-program
-    .command('all <name>')
-    .alias('a')
-    .description('Generate entity, rest controller and repository')
-    .action(generateAll);
 
 program
     .command('prop')
