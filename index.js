@@ -14,7 +14,7 @@ const {
 } = require('./lib/generate');
 
 program
-    .description('Move into the directory where your pom.xml is located')
+    .description('First, move into the directory where your pom.xml is located')
 
 program
     .command('repo <name>')
